@@ -14,3 +14,19 @@ c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto cal
 c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.exe
 c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.xml
 c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.pdb
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\bin\Debug\Lotto calculator.exe.config
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.exe
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.xml
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.pdb
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\bin\Debug\Lotto calculator.exe
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\bin\Debug\Lotto calculator.pdb
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\bin\Debug\Lotto calculator.xml
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.vbprojResolveAssemblyReference.cache
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\obj\Debug\MainWindow.g.vb
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\obj\Debug\Application.g.vb
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator_MarkupCompile.cache
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator_MarkupCompile.lref
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\obj\Debug\MainWindow.baml
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.g.resources
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\obj\Debug\Lotto_calculator.Resources.resources
+C:\Users\Dalton\Documents\GitHub\LottoCalculator\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.vbproj.GenerateResource.Cache

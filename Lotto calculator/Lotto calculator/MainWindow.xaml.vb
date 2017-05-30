@@ -330,6 +330,7 @@
                     'WIN!!!!!!!
                     drawsLabel.Content = "Draws: " + draw.ToString() + " You Won!!"
                     errorLabel.Content = "Finished"
+                    CalculateTicketCost(draw)
                     allSixMatch = True
                 End If
             End While
@@ -345,5 +346,14 @@
         Next
         selectedButtons = New List(Of Button)()
         numbersSelected = 0
+    End Sub
+    Private Sub CalculateTicketCost(draws As Integer)
+        If IsNumeric(textBox_ticketPrice.Text) Then
+            Dim ticketPrice As Double = CDbl(textBox_ticketPrice.Text)
+            label_totalCost.Content = "Total cost of tickets = " + (ticketPrice * draws).ToString()
+        Else
+            label_totalCost.Content = "Ticket price must be a number"
+        End If
+
     End Sub
 End Class
