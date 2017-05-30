@@ -1,0 +1,16 @@
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\bin\Debug\Lotto calculator.exe.config
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\bin\Debug\Lotto calculator.exe
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\bin\Debug\Lotto calculator.pdb
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\bin\Debug\Lotto calculator.xml
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.vbprojResolveAssemblyReference.cache
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\MainWindow.g.vb
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\Application.g.vb
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator_MarkupCompile.cache
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator_MarkupCompile.lref
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\MainWindow.baml
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.g.resources
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\Lotto_calculator.Resources.resources
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.vbproj.GenerateResource.Cache
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.exe
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.xml
+c:\users\dalton\documents\visual studio 2015\Projects\Lotto calculator\Lotto calculator\obj\Debug\Lotto calculator.pdb
