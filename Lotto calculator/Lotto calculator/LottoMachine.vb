@@ -28,7 +28,7 @@
         Return False
     End Function
 
-    Private Function DrawNumber() As Integer
-        Return random.Next(0, MaximumNumber)
+    Public Function DrawNumber() As Integer
+        Return random.Next(1, MaximumNumber)
     End Function
 End Class

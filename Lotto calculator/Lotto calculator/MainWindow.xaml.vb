@@ -23,7 +23,7 @@
             numbersSelected = numbersSelected - 1
             'remove number from list
             Dim i As Integer = 0
-            While numbersSelected = 6
+            While numbersSelected = maxNumbers
                 If buttonNumber = selectedNumbers(i) Then
                     selectedNumbers.Remove(i)
                     selectedButtons.Remove(button)
@@ -34,6 +34,58 @@
         ElseIf isCalculating = True Then
             errorLabel.Content = "Can't change numbers when calculating"
         End If
+    End Sub
+
+    Private Sub button_calculate_Click(sender As Object, e As RoutedEventArgs) Handles button_calculate.Click
+
+        Dim lottoMachine = New LottoMachine(59)
+
+        If numbersSelected = maxNumbers Then
+
+            Dim won As Boolean = False
+            Dim draw = 0
+
+            While won = False
+                draw = draw + 1
+                Dim lottoDraw = lottoMachine.Draw(maxNumbers)
+                won = LottoChecker.HasWon(selectedNumbers, lottoDraw)
+                If draw = Int32.MaxValue Then
+                    won = True
+                End If
+            End While
+
+            drawsLabel.Content = "Draws: " + draw.ToString()
+            drawsLabel.Content = "Draws: " + draw.ToString() + " You Won!!"
+            errorLabel.Content = "Finished"
+
+            If draw = Int32.MaxValue Then
+                errorLabel.Content = "Maximum draws reached and you didn't win. Unlucky!"
+            End If
+
+            CalculateTicketCost(draw)
+
+        ElseIf numbersSelected < maxNumbers Then
+            errorLabel.Content = "Need " + maxNumbers + " Numbers..."
+        End If
+    End Sub
+
+    Private Sub button_clear_Click(sender As Object, e As RoutedEventArgs) Handles button_clear.Click
+        selectedNumbers = New List(Of Integer)()
+        For Each button As Button In selectedButtons
+            button.Background = Brushes.LightGray
+        Next
+        selectedButtons = New List(Of Button)()
+        numbersSelected = 0
+    End Sub
+
+    Private Sub CalculateTicketCost(draws As Integer)
+        If IsNumeric(textBox_ticketPrice.Text) Then
+            Dim ticketPrice As Double = CDbl(textBox_ticketPrice.Text)
+            label_totalCost.Content = "Total cost of tickets = " + (ticketPrice * draws).ToString()
+        Else
+            label_totalCost.Content = "Ticket price must be a number"
+        End If
+
     End Sub
 
     Private Sub button_1_Click(sender As Object, e As RoutedEventArgs) Handles button_1.Click
@@ -268,92 +320,4 @@
         SelectNumber(button_59, 59)
     End Sub
 
-    Private Sub button_calculate_Click(sender As Object, e As RoutedEventArgs) Handles button_calculate.Click
-        If numbersSelected = 6 Then
-            errorLabel.Content = "Drawing..."
-            Dim allSixMatch As Boolean = False
-            Dim amountMatched As Integer = 0
-            Dim draw As Integer = 0
-            While allSixMatch = False
-                amountMatched = 0
-                draw = draw + 1
-                drawsLabel.Content = "Draws: " + draw.ToString()
-                Dim randNumber1 As Integer = CInt(Math.Floor((59 - 1 + 1) * Rnd())) + 1
-                Dim randNumber2 As Integer = CInt(Math.Floor((59 - 1 + 1) * Rnd())) + 1
-                Dim randNumber3 As Integer = CInt(Math.Floor((59 - 1 + 1) * Rnd())) + 1
-                Dim randNumber4 As Integer = CInt(Math.Floor((59 - 1 + 1) * Rnd())) + 1
-                Dim randNumber5 As Integer = CInt(Math.Floor((59 - 1 + 1) * Rnd())) + 1
-                Dim randNumber6 As Integer = CInt(Math.Floor((59 - 1 + 1) * Rnd())) + 1
-
-                'Check First Number
-                For Each number As Integer In selectedNumbers
-                    If randNumber1 = number Then
-                        amountMatched = amountMatched + 1
-                    End If
-                Next
-                'If no match then stop this method
-                '  If amountMatched < 1 Then
-                '   Return
-                'End If
-                'Check Second Number
-                For Each number As Integer In selectedNumbers
-                    If randNumber2 = number Then
-                        amountMatched = amountMatched + 1
-                    End If
-                Next
-                'Check Third Number
-                For Each number As Integer In selectedNumbers
-                    If randNumber3 = number Then
-                        amountMatched = amountMatched + 1
-                    End If
-                Next
-                'Check Fourth Number
-                For Each number As Integer In selectedNumbers
-                    If randNumber4 = number Then
-                        amountMatched = amountMatched + 1
-                    End If
-                Next
-                'Check Fith Number
-                For Each number As Integer In selectedNumbers
-                    If randNumber5 = number Then
-                        amountMatched = amountMatched + 1
-                    End If
-                Next
-                'Check Sixth Number
-                For Each number As Integer In selectedNumbers
-                    If randNumber6 = number Then
-                        amountMatched = amountMatched + 1
-                    End If
-                Next
-
-                If amountMatched = 6 Then
-                    'WIN!!!!!!!
-                    drawsLabel.Content = "Draws: " + draw.ToString() + " You Won!!"
-                    errorLabel.Content = "Finished"
-                    CalculateTicketCost(draw)
-                    allSixMatch = True
-                End If
-            End While
-        ElseIf numbersSelected < 6 Then
-            errorLabel.Content = "Need 6 Numbers..."
-        End If
-    End Sub
-
-    Private Sub button_clear_Click(sender As Object, e As RoutedEventArgs) Handles button_clear.Click
-        selectedNumbers = New List(Of Integer)()
-        For Each button As Button In selectedButtons
-            button.Background = Brushes.LightGray
-        Next
-        selectedButtons = New List(Of Button)()
-        numbersSelected = 0
-    End Sub
-    Private Sub CalculateTicketCost(draws As Integer)
-        If IsNumeric(textBox_ticketPrice.Text) Then
-            Dim ticketPrice As Double = CDbl(textBox_ticketPrice.Text)
-            label_totalCost.Content = "Total cost of tickets = " + (ticketPrice * draws).ToString()
-        Else
-            label_totalCost.Content = "Ticket price must be a number"
-        End If
-
-    End Sub
 End Class
